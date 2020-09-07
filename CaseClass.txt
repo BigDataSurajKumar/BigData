@@ -1,0 +1,62 @@
+/*case class Book (name:String, author:String)
+object caseexample
+{
+  //Main method
+  def main(args: Array[String]): Unit = {
+
+    var Book1 = Book("Data structure and algorith book","cormen")
+    var Book2 = Book("Hadoop Hive book", "Facebook")
+
+    //Display strings
+    println("Name of the book1 is "+Book1.name)
+    println("Author of the Book1 is "+Book1.author)
+    println("Name of the Book2 is"+Book2.name)
+    println("Author of the Book2 is"+Book2.author)
+  }
+}*/
+
+//scala program of case class to create
+//a duplicate of same instance
+
+/*case class Student(name:String, age:Int)
+object caseexample{
+
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val s1 = Student("Suraj", 23)
+
+    //Display parameter
+    println("Name is "+s1.name)
+    println("Age is "+s1.age)
+
+    val s2 = s1.copy()
+    // Display copied data
+    println("Copy Name " +s2.name)
+    println("Copy Age" +s2.age)
+
+
+  }
+}
+
+ */
+//Scala program of case class same object
+//with changing attributes
+
+case class Student(name:String, age:Int)
+object caseexample
+{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val s1 = Student("Suraj", 25)
+    //Display parameter
+    println("Name is " +s1.name)
+    println("Age is " +s1.age)
+
+    val s2 = s1.copy(age = 27)
+
+    //Display copied and changed attributes
+    println("Copy Name is "+ s2.name)
+    println("Change Age is "+s2.age)
+
+  }
+}
