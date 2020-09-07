@@ -1,0 +1,156 @@
+package com.org.second.poc
+
+/*//Scala Trait program
+trait MyTrait {
+
+  def pet
+  def pet_color
+}
+//Myclass inherits trait
+class MyClass extends MyTrait{
+
+  //Implementation of method of MyTrait
+  def pet(): Unit ={
+    println("Pet: DOG")
+  }
+
+  def pet_color(): Unit ={
+    println("Pet_color:White")
+  }
+  //class method
+  def pet_name(): Unit ={
+    println("Pet_name: Doller")
+  }
+}
+object Main
+{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val obj = new MyClass()
+    obj.pet()
+    obj.pet_color()
+    obj.pet_name()
+  }
+}*/
+//Trait with abstract and non-abstract methods
+/*trait MyTrait{
+  //Abstract method
+  def greeting
+  //Non-abstract method
+  def tutorial: Unit ={
+    println("This is a tutorial" +"of traits in scala")
+  }
+}
+//MyClass inherits trait
+class MyClass extends MyTrait
+{
+  //Implementation of abstract method
+  //No need to implement a non-abstract
+  //method because it already implemented
+
+  def greeting(): Unit ={
+    println("Welcome to my world")
+  }
+
+
+}
+object Main
+{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val obj = new MyClass()
+    obj.greeting()
+    obj.tutorial
+  }
+}*/
+
+//A class inherits multiple traits
+//Trait 1
+/*trait MyTrait{
+  //Abstract method
+  def greeting
+}
+//Trait 2
+trait MyTrait2{
+  //Non-abstract method
+  def tutorial: Unit =
+  {
+    println("This is a tutorial"+" of traits in scala")
+
+  }
+}
+
+//Myclass inherits multiple traits
+class MyClass extends MyTrait with MyTrait2{
+  //Implementation of abstract method
+  def greeting(): Unit ={
+    println("Welcome to GeeksofGeeks")
+  }
+}
+object Main{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val obj = new MyClass()
+    obj.greeting()
+    obj.tutorial
+    println("hello")
+    println("world")
+    println("all is well")
+  }
+}*/
+
+//concrete and abstract fields in traits
+
+/*trait MyTrait{
+  //Abstract field
+  var value: Int
+
+
+
+  //Concrete field
+  var Height = 10
+  val Width = 30
+}
+class MyClass extends MyTrait{
+  //Overriding MyTrait's fields
+
+  Height = 40
+  var value = 12
+
+
+ override val Width = 10
+  //method to display the fields
+  def Display(): Unit ={
+
+    println("value:", +value)
+    println("Heigth:", +Height)
+    println("Width:", +Width)
+
+  }
+}
+
+object Main{
+
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val obj = new MyClass()
+    obj.Display()
+  }
+}*/
+//To add a trait to an object instance
+
+class MyClass{
+
+}
+trait MyTrait{
+  println("Welcome to MyTrait")
+}
+object Main
+{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    //Here MyTrait is added to the
+    //Object instance of MyClass
+    val obj = new MyClass with MyTrait
+  }
+}
