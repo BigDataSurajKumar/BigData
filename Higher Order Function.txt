@@ -1,0 +1,41 @@
+package com.org.second.poc
+// Scala program of higher order funcation
+/*object GFG {
+//Main method
+def main(args: Array[String]): Unit = {
+  //Display output by assigning
+  //value and calling functions
+  println(apply(format, 32))
+}
+  // A higher order funcation
+  def apply(x: Double => String, y: Double) = x(y)
+  //Defining a function for
+  //the format and using a
+  //method toString()
+  def format[R](z:R) = "{"+z.toString()+"}"
+}*/
+
+//Scala program of higher order function
+/*object GFG{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Creating a list of numbers
+    val num = List(7,8,9)
+    //Defining a method
+    def multiplyValue = (y:Int) => y*3
+    //Creating a higher order function
+    //that is assigned to the variable
+    val result = num.map(y => multiplyValue(y))
+    //Displays output
+    println("Multiplied List is:"+result)
+  }
+}*/
+object GFG{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val salaries = Seq(20000,70000,40000)
+    val doubleSalary = (x:Int) => x*2
+    val newSalaries = salaries.map(doubleSalary)
+    println(newSalaries)
+  }
+}
