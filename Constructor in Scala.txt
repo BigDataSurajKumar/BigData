@@ -1,0 +1,82 @@
+package com.org.second.poc
+
+//Creating a primary constructor
+//with parameter-list
+/*class Constructor(Aname: String, Cname: String, Particle: Int) {
+
+  def display(): Unit ={
+    println("Author name:"+Aname)
+    println("Chapter name:"+Cname)
+    println("Total published articles:"+Particle)
+  }
+
+}
+object Hello
+{
+  def main(args: Array[String]): Unit = {
+    //Creating and initializing
+    //object of Constructor class
+    var obj = new Constructor("Suraj","Constructor" ,145)
+    obj.display()
+  }
+}*/
+//Concept of default primary constructor
+/*class GFG{
+  def display(): Unit ={
+    println("Welcome to MyWorld")
+  }
+}
+object Main1{
+  def main(args: Array[String]): Unit = {
+    //Creating object of GFG class
+    var obj = new GFG()
+    obj.display()
+  }
+}*/
+
+//concept of primary constrcutor
+//Creating primary constructor with default values
+/*class GFG1(val Aname: String ="Suraj",
+          val Cname: String = "Constructors")
+{
+  def display(): Unit =
+  {
+    println("Author name:" +Aname)
+    println("Chapter name:"+Cname)
+  }
+}
+object Main2{
+  def main(args: Array[String]): Unit = {
+    //Creating object of GFG class
+   var obj = new GFG1()
+
+    obj.display()
+  }
+}*/
+
+//Concept of Auxiliary Constructor
+//Primary constructor
+class Const1(Aname: String, Cname: String){
+  var no: Int =0
+  def display(): Unit =
+  {
+    println("Author name:" +Aname)
+    println("Chapter name:" +Cname)
+    println("Total no of articles:"+no)
+  }
+  //Auxiliary Constructor
+  def this(Aname: String, Cname: String, no: Int)
+    {
+      //Invoking primary constructor
+      this(Aname, Cname)
+      this.no=no
+    }
+}
+object Main3
+{
+  def main(args: Array[String]): Unit = {
+    //Creating object of Const1 class
+    var obj = new Const1("Suraj", "Constructor",27)
+    obj.display()
+  }
+}
