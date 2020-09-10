@@ -1,0 +1,79 @@
+package com.org.second.poc
+//Primary Constructor Example
+/*class Student(id:Int, name:String){
+  def showDetails(): Unit ={
+    println(id+""+name)
+  }
+}
+
+object MainObject{
+  def main(args: Array[String]): Unit = {
+    var s = new Student(101, "Suraj")
+    s.showDetails()
+  }
+}*/
+//Auxiliary Constructor
+/*class Student(id:Int, name:String){
+  var age:Int =0
+  def showDetails(): Unit ={
+    println(id+""+name+""+age)
+  }
+  def this(id:Int,name:String,age:Int){
+    //Calling primary constructor and it is first line
+    this(id,name)
+    this.age=age
+
+  }
+}
+object MainObject{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new Student(101, "Suraj",26)
+    s.showDetails()
+
+
+  }
+}*/
+//Constructor overloading
+/*class Student(id:Int){
+  def this(id:Int,name:String)={
+    this(id)
+    println(id+""+name)
+  }
+  println(id)
+}
+object MainObject{
+  def main(args: Array[String]): Unit = {
+    new Student(101)
+    new Student(100,"India")
+  }
+}*/
+
+//primary constructor
+class Pizza(var crustSize: Int, var crustType: String ){
+  //one-arg auxiliary constructor
+  def this(crustSize: Int){
+    this(crustSize, Pizza.DEFAULT_CRUST_TYPE)
+  }
+  //one-arg auxiliary constructor
+  def this(crustType: String){
+    this(Pizza.DEFAULT_CRUST_TYPE, crustType)
+  }
+  //zero-arg auxiliary constructor
+  def this(){
+    this(Pizza.DEFAULT_CRUST_TYPE, Pizza.DEFAULT_CRUST_TYPE)
+
+  }
+  override def toString = s"A $crustSize inch pizza with a $crustType crust"
+}
+object Pizza{
+  def main(args: Array[String]): Unit = {
+
+
+  val DEFAULT_CRUST_SIZE = 12
+  val DEFAULT_CRUST_TYPE = "THIN"
+  val p1 = new Pizza(Pizza.DEFAULT_CRUST_SIZE, Pizza.DEFAULT_CRUST_TYPE)
+  val p2 = new Pizza(Pizza.DEFAULT_CRUST_SIZE)
+  val p3 = new Pizza(Pizza.DEFAULT_CRUST_TYPE)
+  val p4 = new Pizza
+}}
