@@ -1,0 +1,105 @@
+package com.org.second.poc
+import scala.collection.immutable._
+import scala.collection.immutable.SortedSet
+
+//Set simple Example
+/*object CollectionMain {
+  def main(args: Array[String]): Unit = {
+    //An empty set
+    val set1 = Set()
+    val games = Set("Cricket","Footbal","Hockey")
+    println(set1)
+    println(games)
+
+  }
+
+}*/
+//Another example for getting first and last elements from set
+/*object CollectionMain{
+  def main(args: Array[String]): Unit = {
+    val games = Set("Cricket","Footabll","Hockey")
+    //Return first element
+    println(games.head)
+    //Return all elements except first element
+    println(games.tail)
+    //Return either true or false
+    println(games.isEmpty)
+
+  }
+}*/
+//Merge two Set
+/*object CollectionMain{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val games = Set("Cricket","Football","Hockey")
+    val alphabet = Set("A","B","C","D","E")
+    //Merging two sets
+    val mergeSet = games++alphabet
+    println("Elements in games set:" +games.size)
+    println("Elements in alphabet set:"+alphabet.size)
+    println("Elements of mergeSet:"+mergeSet)
+  }
+
+}*/
+// we can check elements is present or not in set
+//using contains() method
+
+/*object CollectionMain{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val games = Set("Cricket","Football","Hockey","Golf")
+    println(games)
+    println("Elements in set:"+games.size)
+    println("Golf exists in the set:"+games.contains("Golf"))
+    println("Racing exists in the set:"+games.contains("Racing"))
+  }
+}*/
+//Adding and Removing elements in set
+/*object CollectionMain{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var games = Set("Cricket","Football","Hockey","Golf")
+    println(games)
+    //Adding new elements
+    games+="Racing"
+    println(games)
+    //Adding new element, it does not allow duplicacy.
+    games+="Cricket"
+    println(games)
+    //Removing element
+    games-="Golf"
+    println(games)
+  }
+}*/
+
+//Iterating Set Elements using for loop
+/*object CollectionMain{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var games = Set("Cricket","Football","Hockey","Golf")
+    //for(game<-games) {
+    games.foreach((element:String)=> println(element))
+    }
+}*/
+
+//we can use math operation like Intersection and Union in set
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var games = Set("Cricket","Football","Hockey","Golf","C")
+    var alphabet = Set("A","B","C","D","E","Golf")
+    var setIntersection = games.intersect(alphabet)
+    println("Intersection by using intersection method:"+setIntersection)
+    println("Intersection by using & operator:"+(games&alphabet))
+    var setUnion = games.union(alphabet)
+    println(setUnion)
+  }
+}*/
+//Scala sorted set
+object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var number: SortedSet[Int] = SortedSet(5,9,1,4,2,6,3,8,7)
+    number.foreach((element:Int)=>println(element))
+  }
+}
