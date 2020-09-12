@@ -1,0 +1,102 @@
+package com.org.second.poc
+import scala.collection.immutable._
+import scala.collection.immutable.SortedSet
+import scala.collection.immutable.HashSet
+
+//HashSet example
+/*object CollectionMain {
+  //Main method
+  def main(args: Array[String]): Unit = {
+   // var hashset = HashSet(4,0,2,5,1,55,21)
+    // hashset.foreach((element:Int)=> println(element+""))
+    //BitSet set of non-negative integers
+  var number = BitSet(1,5,8,6,9,0)
+    number.foreach((element:Int)=>println(element))
+  }
+}*/
+
+//Scala BitSet Adding and Removing Elements example
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var numbers = BitSet(1,5,8,6,9,0)
+    numbers.foreach((element:Int)=> println(element+""))
+    //Adding an element
+    numbers+=20
+    println("Adding 20 number")
+    numbers.foreach((element:Int)=> println(element+" "))
+    //Deleting an element
+    numbers-=0
+    println("Deleting number 0:")
+    numbers.foreach((element:Int)=> println(element+" "))
+
+  }
+}*/
+//Scala ListSet
+//In scala, ListSet class implements immutable sets using a list-based data structure. Elements are stored internally in reversed insertion order, which means the newest element is at the head of the list.
+// It maintains insertion order.Means whenever we store the data it will store after that after
+/*object CollectionMain{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var listset = ListSet(4,2,8,0,6,3,66)
+    listset.foreach((element:Int)=>println(element+""))
+  }
+}*/
+//Scala ListSet example: Creating ListSet and adding elements
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Creating empty ListSet
+    var listset:ListSet[String] = new ListSet()
+    var listset2:ListSet[String] = ListSet.empty
+
+    println("listset:"+listset)
+    println("listset2:"+listset2)
+    println("After adding new elements:")
+    //Adding new elements
+    listset+="India"
+    listset2+="Japan"
+    println("listset:"+listset)
+    println("listset2:"+listset2)
+  }
+}*/
+//another example to add some elements in listset
+/*object CollectionMain{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var listset = ListSet("USA","Japan")
+    listset.foreach((element:String)=>println(element+" "))
+    //Adding new elements
+    listset+="Russia"
+    listset+="Brazil"
+    listset+="Nepal"
+
+    println(listset)
+
+  }
+}*/
+//Scala Seq
+//Seq is a trait which represents indexed sequences that are guaranteed immutable. You can access elements by using their indexes. It maintains insertion order of elements
+
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var seq:Seq[Int] = Seq(52,85,1,8,3,2,7)
+    seq.foreach((element:Int)=>print(element+" "))
+    println("Accessing element by using index")
+    println(seq(0))
+  }
+}*/
+//Scala Seq some predefined methods
+object CollectionMain{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var seq:Seq[Int] = Seq(52,85,1,8,3,2,7)
+    seq.foreach((element:Int)=>print(element+" "))
+    println("Is Empty:"+seq.isEmpty)
+    println("Ends with (2,7):"+seq.endsWith(Seq(2,7)))
+    println("Contains 8:"+seq.contains(8))
+    println("Last Index of 3:" +seq.lastIndexOf(3))
+    println("Reverse order of sequence:"+ seq.reverse)
+  }
+}
