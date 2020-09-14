@@ -1,0 +1,100 @@
+package com.org.second.poc
+//import scala.collection.immutable._
+import scala.collection.mutable._
+
+import scala.collection.immutable.SortedSet
+import scala.collection.immutable.HashSet
+
+//Scala Queue
+//Queue implements a data structure that allows inserting and retrieving elements in a first-in-first-out (FIFO) manner.
+//In scala, Queue is implemented as a pair of lists. One is used to insert the elements and second to contain deleted elements. Elements are added to the first list and removed from the second list.
+//example
+/*object CollectionMain {
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var queue = Queue(1,5,6,2,3,9,5,2,5)
+    var queue2:Queue[Int]=Queue(1,5,6,2,3,9,5,2,5)
+    println(queue)
+    println(queue2)
+  }
+}*/
+//Example 2:
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var queue = Queue(1,5,6,2,3,9,5,2,5)
+    println("Queue Elements:")
+    queue.foreach((element:Int)=>println(element+""))
+    var firstelement = queue.front
+    println("First element in queue:"+firstelement)
+    var enqueueQueue = queue.enqueue(100)
+    println("Element added in the queue:")
+    enqueueQueue.foreach((element:Int)=>println(element+""))
+    var dequeue = queue.dequeue
+    println("Element delete from this queue:"+dequeue)
+  }
+}*/
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Initialize a Queue
+    var q1 = Queue(1,2,3,4,5)
+    //Print the elements of queue
+    println("Queue Elements:")
+    q1.foreach((element:Int)=>println(element+" "))
+    //print the first element of the queue
+    var firstelement = q1.front
+    println("First element in the queue"+firstelement)
+    //Enqueue 10 in the queue
+    var add = q1.enqueue(10)
+    //print the element of queue
+    println("Queue Elements after enqueue:")
+    add.foreach((element:Int)=>println(element+" "))
+    //Dequeue first element from thr queue
+    var deq = q1.dequeue
+    //print the elements of queue
+    println("Queue elements after dequeue:")
+    q1.foreach((element:Int)=>println(element+" "))
+    //print the Dequeued element
+    println("Dequeued element:"+deq)
+    //using isEmpty method
+    println("Queue is empty:"+q1.isEmpty)
+
+
+  }
+}*/
+object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Initialize a Queue
+    var fruits = Queue[String]()
+    //Print the elements of queue
+    fruits.enqueue("Mango")
+    fruits.enqueue("Banana")
+    fruits.enqueue("Apple")
+    fruits.enqueue("Guava")
+    //Print the elements of queue
+    println("Queue Elements:")
+    fruits.foreach((element:String)=>println(element+" "))
+   //Print the first element of the queue
+    var firstElement = fruits.front
+    println("First element in the queue:"+firstElement)
+    //Enqueue pineapple in the queue
+    fruits.enqueue("Pineapple")
+    //Print the element of queue
+    println("Queue elements after enqueue:")
+    fruits.foreach((element:String)=>println(element+" "))
+    //Dequeue first element of queue
+    var deq = fruits.dequeue()
+    //Print the elements of queue
+    println("Queue elements after dequeue:")
+    fruits.foreach((element:String)=>println(element+" "))
+    //print the Dequeued element
+    println("Dequeued element:"+deq)
+    //Using clear method
+    println("Clear the queue:"+fruits.clear)
+    //Using isEmpty method
+    println("Queue is empty:"+fruits.isEmpty)
+    println("Queue is over")
+  }
+}
