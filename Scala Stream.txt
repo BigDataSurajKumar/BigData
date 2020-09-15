@@ -1,0 +1,65 @@
+package com.org.second.poc
+import scala.collection.immutable._
+import scala.collection.mutable._
+import scala.collection.immutable.Stream.cons
+import scala.collection.immutable.SortedSet
+import scala.collection.immutable.HashSet
+//Stream is a lazy list. It evaluates elements only when they are required. This is a feature of scala. Scala supports lazy computation. It increases performance of your program.
+/*object CollectionMain {
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    val stram = 100 #:: 200 #::85#:: Stream.empty
+    println(stram)
+  }
+}*/
+//In this above example output would be Stream(100, <not computed>
+//Scala has feature lazy evaluation , so scala does not evaluate list until is required. the tail is not printed, because it hasn't been computed yet.
+//We can also create a Stream by using Stream.cons . A package import scala.collection.immutable.Stream.cons is used for creating stream.
+
+//Program to creating an stream using cons
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Creating stream
+    val stream2: Stream[Int] = cons(1,cons(2,cons(3,Stream.empty)))
+    println(s"Elements of stream2 = ${stream2}")
+  }
+}*/
+//Program to using take function on stream
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Creating stream
+    val stream = 1 #:: 2#:: 8 #:: Stream.empty
+    println(stream)
+    //Taking elements from stream
+    println("Take first 2 number from stream =")
+    stream.take(2).print()
+    println("Take first 10 number from stream2 =")
+    stream.take(10).print()
+  }
+ }*/
+//Scala program to using map function on stream
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Creating stream
+    val stream = 1 #:: 2#:: 8#:: Stream.empty
+    println(stream)
+    //Map elements from stream
+    println(stream.map{_+5})
+  }
+} */
+//Predefind methods in scala stream
+object CollectionMain{
+  def main(args: Array[String]): Unit = {
+    val stream = 100#:: 200#:: 85#:: Stream.empty
+    println(stream)
+    val stream2 = (1 to 10).toStream
+    println(stream2)
+    var firstElement = stream2.head
+    println(firstElement)
+    println(stream2.take(10))
+    println(stream.map{_*3})
+  }
+}
