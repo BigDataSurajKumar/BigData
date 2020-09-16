@@ -1,0 +1,114 @@
+package com.org.second.poc
+//import scala.collection.immutable._
+import scala.collection.mutable._
+import scala.collection.immutable.Stream.cons
+import scala.collection.immutable.SortedSet
+import scala.collection.immutable.HashSet
+//Map is used to store elements. It stores elements in pairs of key and values. In scala, you can create map by using two ways either by using comma separated pairs or by using rocket operator.
+/*object CollectionMain {
+//Main Method
+def main(args: Array[String]): Unit = {
+  var map = Map(("A","Apple"),("B","Ball"))
+  var map2 = Map("C"->"Cat","D"->"Dog")
+  var emptyMap:Map[String,String]= Map.empty[String,String]
+  println(map)
+  println(map2)
+  println("Empty Map:"+emptyMap)
+}
+}*/
+//Example: Scala MAP :Adding and Removing elements
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Creating Map
+    var map = Map("A"->"Apple","B"->"Ball")
+    //Accessing value by using key
+    println(map("A"))
+    //Adding a new element to map
+    var newMap = map+("C"->"Cat")
+    println(newMap)
+    //Removing an element from map
+    var removeElement = newMap-("B")
+    println(removeElement)
+
+  }
+}*/
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    val mapIm = Map("Ajay"->30,"Suraj"->50,"Radha"->40)
+    //Accessing score of suraj
+    val suraj = mapIm("Suraj")
+    println(suraj)
+  }
+}*/
+/*object CollectionMain {
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    val mapIm = Map("Suraj" -> 10, "Kumar" -> 20, "Hyderabad" -> 30)
+    //The key check in the Map
+    val suraj = if (mapIm.contains("Suraj"))
+      mapIm("Suraj") else 0
+    val raju = if (mapIm.contains("raju"))
+      mapIm("raju") else 0
+    println("suraj:" + suraj)
+    println("raju:" + raju)
+
+  }
+
+}*/
+//Updating the key in value
+//Suraj is key and 10 is value.In map value can duplicate but key does not.
+//Depend upon situation we have to change the file expoert
+//In map both immutable and mutable file will use, in below example we have to change the value so we use mutable file
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    val mapIm = Map("Suraj"->10,"Kumar"->20,"Delhi"->40)
+    println(mapIm)
+    //Updating
+    mapIm("Delhi") = 30
+    println(mapIm)
+  }
+}*/
+//Adding new key-value pair and delete the the key value pair
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    val mapMut = scala.collection.mutable.Map("Suraj"->10,"Kumar"->20,"Delhi"->30)
+    println("Before Adding:"+mapMut)
+    //Adding a new key "Hyderabad" and updating an existing key "Suraj"
+   // mapMut += ("Suraj"->50,"Hyderabad"->60)
+   // println("After adding:"+mapMut)
+    mapMut -= ("Delhi")
+    println("After deleting:" +mapMut)
+  }
+}*/
+//Iteration in a Map
+//key-value pair corresponds to a tuple with two elements. Therefore ,while performing iteration loop variable needs to be pair
+/*object CollectionMain{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    val mapMut = scala.collection.mutable.Map("Suraj"->10,"Kumar"->20,"Hyderabad"->30)
+    //(K,V) is a tuple with two elements
+    for((k, v)<- mapMut)
+      {
+        //where k is key and v is value
+        println("Key:"+k+",")
+        println("Value:"+v+",")
+      }
+  }
+} */
+//Empty Map
+object CollectionMain{
+    //Main Method
+    def main(args: Array[String]): Unit = {
+      //Creating of map having key-value
+      //Pair of type(String,Int)
+      val mapMut = scala.collection.mutable.Map[String,Int]()
+      println("Empty Map:"+mapMut)
+      //Adding new Entry
+      mapMut +=("Suraj"->10)
+      println("New Entry:"+mapMut)
+    }
+}
