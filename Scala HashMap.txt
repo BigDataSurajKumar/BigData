@@ -1,0 +1,69 @@
+package com.org.second.poc
+//import scala.collection.immutable._
+import scala.collection.mutable._
+import scala.collection.immutable.Stream.cons
+import scala.collection.immutable.SortedSet
+import scala.collection.immutable.HashSet
+import scala.collection.mutable
+
+//HashMap is used to store element. It use hash code to store elements and return a map
+
+
+/*object CollectionMain {
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var hashMap = new HashMap()
+    var hashMap2 = HashMap("A"->"Apple","B"->"Ball","C"->"Cat")
+    println(hashMap)
+    println(hashMap2)
+  }
+}*/
+//Scala HashMap Example :Adding and Accessing Elements
+/*object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var hashMap = HashMap("A"->"Apple","B"->"Ball","C"->"Cat")
+    hashMap.foreach{
+          //Iterating element
+      case (key,value)=>println(key+"->"+value)
+    }
+    //Accessing value by using key
+    println((hashMap("B")))
+    val newHashMap = hashMap+("D"->"Doll")
+    newHashMap.foreach{
+      case (key,value)=> println(key+"->"+value)
+    }
+  }
+}*/
+//Scala ListMap example
+//This class implements immutable maps by using a list-based data structure. It maintains insertion order and returns ListMap. This collection is suitable for small elements.
+/*object CollectionMain{
+ //Main method
+ def main(args: Array[String]): Unit = {
+   var listMap = ListMap("Rice"->"100","wheat"->"50","Gram"->"500")
+   //Creating listmap with elements
+   var emptyListMap = new ListMap()
+   //creating an empty list map
+   var emptyListMap2 = ListMap.empty
+   println(listMap)
+   println(emptyListMap)
+   println(emptyListMap2)
+
+ }
+}*/
+//ListMap: Applying Basic Operations
+object CollectionMain{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var listMap = ListMap("Rice"->"100","Wheat"->"50","Gram"->"500")
+    //Creating listmap with elements
+    listMap.foreach{
+      case(key,value)=>println(key+"->"+value)
+    }
+    println(listMap("Gram"))
+    var newListMap = listMap+("Pulses"->"550")
+    newListMap.foreach{
+      case(key,value)=>println(key+"->"+value)
+    }
+  }
+}
