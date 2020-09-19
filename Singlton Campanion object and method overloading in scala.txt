@@ -1,0 +1,103 @@
+package com.org.second.poc
+
+//Scala Singleton object
+//Singleton object is an object which is declared by using object keyword instead by class. No object is required to call methods declared inside singleton object
+//Example in singleton object
+
+/*object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //No need to create object
+    SingletonObject.hello()
+  }
+}
+object SingletonObject{
+  def hello(): Unit ={
+    println("Hello, This is Singleton Object")
+  }
+}*/
+//Scala Companion Object Example
+//In scala, when you have a class with same name as singleton object, it is called companion class and the singleton object is called companion object.
+//The companion class and its companion object both must be defined in the same source file.
+
+/*class ComapanionClass {
+  def hello() {
+    println("Hello, this is Companion Class")
+  }
+
+}
+object CompanionObject{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Compainon object same as class name
+    new ComapanionClass().hello()
+
+    println("And this is Companion Object.")
+  }
+}*/
+//Another example in Companion Object
+//In this example we can access private member also in object because of Companion object
+/*class ExampleofCompanion{
+  //Variable of Companion class
+  var str1 = "Hello world"
+  var str2 = "Welcome"
+
+  //Method of Companion class
+  private def show(): Unit ={
+    println(str1)
+    println(str2)
+  }
+  private def now(): Unit ={
+    println(str1)
+    println(str2)
+  }
+}
+//Companion object
+object ExampleofCompanion{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var obj = new ExampleofCompanion()
+    obj.show()
+    obj.now()
+  }
+}*/
+//Scala Method overloading
+//Scala provides method overloading feature which allows us to define methods of same name but having different parameters or data types. It helps to optimize code.
+/*class Arithmetic{
+  def add(a:Int,b:Int): Unit ={
+    var sum = a+b
+    println(sum)
+}
+  def add(a:Int,b:Int,c:Int): Unit ={
+    var multi = a*b*c
+    println(multi)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a = new Arithmetic()
+    a.add(10,10)
+    a.add(2,3,4)
+  }
+}*/
+//Scala Method Overloading example using diff data type
+class Arithmetic{
+  def num(a:Int,b:Int): Unit ={
+    var sum = a+b
+    println("Sum of two number"+sum)
+  }
+  def num(a:Double,b:Double){
+    var multi = a*b
+    println("Multiple of two number"+multi)
+
+  }
+}
+object ScalaOOPS{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var b = new Arithmetic()
+    b.num(10,20)
+    b.num(10.0,20.0)
+  }
+}
