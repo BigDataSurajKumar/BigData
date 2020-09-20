@@ -1,0 +1,77 @@
+package com.org.second.poc
+
+import org.sparkproject.jetty.client.Origin.Address
+
+//Scala this
+//In scala, this is a keyword and used to refer current object. You can call instance variables, methods, constructors by using this keyword.
+//this keyword is also used with auxiliary constructor.
+/*class ThisExample{
+  var id:Int =0
+  var name: String =""
+  def this(id:Int,name:String){
+     this()
+    this.id = id
+    this.name = name
+  }
+  def show(): Unit ={
+    println(id+" "+name)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var t = new ThisExample(101,"Suraj")
+    t.show()
+  }
+}*/
+//Scala Constructor Calling by using this keyword
+/*class Student(name:String){
+  def this(name:String,age:Int){
+    this(name)
+    println(name+" "+age)
+
+  }
+}
+object ScalaOOPS{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var s = new Student("Suraj",101)
+  }
+}*/
+/*class Addition(a:Int){
+  //using this keyword
+  def this(a:Int,b:Int){
+    this(a)
+    println(a+"+"+b+" ="+{a+b})
+  }
+}
+//Creating object
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var add = new Addition(10,20)
+
+  }
+}*/
+class Student{
+  var fname:String = ""
+  var roll = 0
+  //Using this keyword
+  def this(fname:String, roll:Int){
+    this()
+    this.fname = fname
+    this.roll = roll
+  }
+  def show(): Unit ={
+    println("Student First name"+fname+" and Roll no is"+roll)
+  }
+}
+//Creating object
+object ScalaOOPS
+{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new Student("suraj",101)
+    s.show()
+  }
+}
