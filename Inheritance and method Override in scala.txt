@@ -1,0 +1,90 @@
+package com.org.second.poc
+//Inheritance
+
+//Inheritance is an object oriented concept which is used to reusability of code. You can achieve inheritance by using extends keyword. To achieve inheritance a class must extend to other class. A class which is extended called super or parent class. a class which extends class is called derived or base class.
+//Scala Single Inheritance Example
+/*class Employee{
+  var salary:Float = 10000
+}
+class programmer extends Employee{
+  var bonus:Int = 5000
+  println("Salary ="+salary)
+  println("Bonus ="+bonus)
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    new programmer()
+  }
+}*/
+//Multilevel Inheritance
+/*class A{
+  var salary1 = 10000
+}
+class B extends A{
+  var salary2 = 20000
+}
+class C extends B{
+  def show(): Unit ={
+    println("Salary1=" +salary1)
+    println("Salary2="+salary2)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var c = new C()
+    c.show()
+  }
+}*/
+//Scala Method Overriding
+//When a subclass has the same name method as defined in the parent class, it is known as method overriding. When subclass wants to provide a specific implementation for the method defined in the parent class, it overrides method from parent class.
+/*class Vehicle{
+  def run(): Unit ={
+    println("Vehicle is running")
+  }
+}
+class Bike extends Vehicle {
+  override def run() {
+    println("Bike is running")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var b = new Bike()
+    b.run()
+  }
+}*/
+class Bank{
+  def getRateOfInterest()={
+    0
+  }
+}
+class SBI extends Bank{
+  override def getRateOfInterest()={
+    8
+  }
+}
+class ICICI extends Bank{
+  override def getRateOfInterest()={
+    7
+  }
+}
+class AXIS extends Bank{
+  override def getRateOfInterest()={
+    12
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new SBI()
+    var i = new ICICI()
+    var a = new AXIS()
+    println("SBI Rate of Interest:"+s.getRateOfInterest())
+    println("ICICI Rate of Interest:"+i.getRateOfInterest())
+    println("AXIS Rate of Interest:" +a.getRateOfInterest())
+
+  }
+}
