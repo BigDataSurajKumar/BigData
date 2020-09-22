@@ -1,0 +1,118 @@
+package com.org.second.poc
+//In scala, you can override fields also but it has some rules that need
+//Scala Field Overriding
+/*class Vehicle{
+  var speed:Int = 60
+}
+class Bike extends Vehicle{
+  var speed:Int = 100
+  def show(): Unit ={
+    println(speed)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var b = new Bike()
+    b.show()
+  }
+}*/
+
+//obove output:- Error- Variable speed needs 'override' modifier
+
+/*class Vehicle{
+  val speed:Int = 60
+}
+class Bike extends Vehicle{
+  override val speed:Int = 100
+  def show(){
+    println(speed)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var b = new Bike()
+    b.show()
+
+  }
+}*/
+//In scala, you can override only those variables which are declared by using val keyword in both classes.
+//Example:3
+/*class Vehicle{
+  var speed:Int = 60
+}
+class Bike extends Vehicle{
+  override var speed:Int = 100
+  def show(){
+    println(speed)
+  }
+}
+object MainObject{
+  def main(args:Array[String]){
+    var b = new Bike()
+    b.show()
+  }
+}*/
+
+//Output:- variable speed cannot override a mutable variable
+
+//Scala Field Overriding Example4
+/*class Vehicle{
+  val speed:Int = 60
+
+}
+
+class Bike extends Vehicle{
+  override var speed:Int = 100
+  def show(){
+    println(speed)
+  }
+}
+
+object MainObject{
+  def main(args:Array[String]){
+    var b = new Bike()
+    b.show()
+  }
+}*/
+
+//Error - variable speed needs to be a stable, immutable value
+//Scala program of field
+class Shapes{
+  //creating a variable with val keyword
+  val description:String = "shape"
+}
+//Creating a subclass
+class shape_1 extends Shapes{
+  //Overriding field using override keyword
+  override val description: String = "it is a circle"
+
+  //Defining a method
+  def display(): Unit ={
+    //Display output
+    println(description)
+  }
+}
+//Creating a subclass
+class shape2 extends Shapes{
+  //Overrideing field using override keyword
+  override val description: String = "It is a square"
+  //Defining a method
+  def display(): Unit ={
+    //Display output
+    println(description)
+  }
+}
+//Creating object
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //creating instance for all the sub classes
+    var x = new shape_1()
+    var y = new shape2()
+    //Calling method
+    x.display()
+    y.display()
+  }
+}
