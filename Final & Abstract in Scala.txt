@@ -1,0 +1,114 @@
+package com.org.second.poc
+//Scala Final
+//Final is a keyword, which is used to prevent inheritance of super class members into derived class. You can declare final variables, methods and classes also.
+/*class Vehicle {
+  final val speed: Int = 60
+}
+class Bike extends Vehicle{
+  override val speed:Int = 100
+  def show(): Unit ={
+    println(speed)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var b = new Bike()
+    b.show()
+  }
+}*/
+//Above program the output would be : Error - value speed cannot override final member
+//Scala Final Method:- Final method declare in the parent class can't be override. You can make any method to final if you don't want to get it overridden.
+/*class Vehicle{
+  final def show(){
+    println("Vehicle is running")
+  }
+}
+class Bike extends Vehicle{
+  //Override val speed:Int = 100
+  override def show(){
+    println("Bike is Running")
+
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var b = new Bike()
+b.show()
+  }
+}*/
+//In above code the output would be:- method show cannot override final member
+//    override def show(){
+//Same thing will happen in class if we apply final keyword in class we can not inherit in sub class.
+
+//Scala Abstract class
+//Abstraction is the process to hide the internal details and showing only the functionality. In Scala, abstraction is achieved by using an abstract class. The working of the Scala abstract class is similar to Java abstract class.
+//In Scala, an abstract class is constructed using the abstract keyword.
+//It contains both abstract and non-abstract methods and cannot support multiple inheritances. A class can extend only one abstract class.
+
+//Scala program to illustrate how to create abstract class
+/*abstract class myauthor{
+  //abstract method
+  def details()
+}
+//GFG class extends abstract class
+class Myclass extends myauthor{
+  def details(){
+    println("Author name: Suraj Kumar")
+    println("Topic name: Abstract class in Scala")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+      //Object of GFG class
+      var obj = new Myclass()
+      obj.details()
+    }
+  }*/
+//Like Java, in Scala, we are not allowed to create the instance of the abstract class. If we try to create objects of the abstract class, then the compiler will give an error. Example below
+//Abstract class
+/*abstract class myauthor{
+  //abstract method
+  def details()
+}
+object ScalaOOPS{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    //Object of myauthor class
+    var obj = new myauthor
+  }
+}*/
+//In Scala, an abstract class can also contain fields. These fields are accessed by the abstract class methods and by the methods of the class which inherit abstract class.
+//Abstract class with fields
+abstract class Geek{
+  var name: String = "GeeksforGeeks"
+  var tutorial: String = "Scala"
+  def portal()
+
+}
+//GFG class extends abstract class
+class testclass extends Geek{
+  //Abstract class method accessing
+  //fields of the abstract class
+  def portal(){
+    println("Portal name:"+name)
+  }
+
+
+  //GFG class method accessing
+  //fields of the abstract class
+  def tutdetails(){
+    println("Tutorial name:"+tutorial)
+  }
+}
+object ScalaOOPS{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    //object of GFG class
+    var obj = new testclass()
+    obj.portal()
+    obj.tutdetails()
+  }
+}
