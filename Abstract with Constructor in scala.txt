@@ -1,0 +1,88 @@
+package com.org.second.poc
+
+//Like Java, In Scala, an abstract class can also contain a constructor and a constructor of an abstract class is called when an instance of a inherited class is created.
+//Abstract class with constructor and constructor two aruments
+/*abstract class myauthor(name:String,topic:String){
+  def details()
+}
+//Test class extends abstract class
+class Test(name:String, topic:String) extends myauthor(name,topic){
+  def details(){
+    println("Author name:"+name)
+    println("Topic name:"+topic)
+
+  }
+}
+object ScalaOOPS{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    //Object of Test class
+    var obj = new Test("Suraj","Abstract class")
+    obj.details()
+  }
+}*/
+//An abstract class can also contain only non- abstract method. This allows us to create classes that cannot be instantiated, but can only be inherited.
+//abstract class with non abstract method
+/*abstract class myauthor{
+  //Non-abstract method
+  def details(){
+    println("Welcome to Myworld")
+  }
+}
+//Mytest class extends abstract class
+class Mytext extends myauthor{
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Object of Mytext class
+    var obj = new Mytext()
+    obj.details()
+  }
+}*/
+//In Scala, an abstract class can contain final methods (methods that cannot be overridden).
+//Abstract class with the final method
+/*abstract class myauthor{
+  final def mymethod(){
+    println("Final method")
+  }
+}
+//MyTest class extends abstract class
+class Mytest extends myauthor{
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Object of Mytest class
+    var obj = new Mytest()
+    obj.mymethod()
+  }
+}*/
+//Creating constructor
+/*abstract class Bike(a:Int){
+  //Creating variable
+  var b:Int = 20
+  var c:Int = 25
+  //Abstract method
+  def run()
+  //Non-abstract method
+  def performance(): Unit ={
+    println("Performance awesome")
+  }
+}
+class Hero(a:Int) extends Bike(a){
+  c= 30
+  def run(){
+    println("Running fine...")
+    println("a="+a)
+    println("b="+b)
+    println("c="+c)
+  }
+}
+object ScalaOOPS{
+  def main(args: Array[String]): Unit = {
+    var h = new Hero(10)
+    h.run()
+    h.performance()
+  }
+}*/
