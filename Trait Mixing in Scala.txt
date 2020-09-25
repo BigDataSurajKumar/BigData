@@ -1,0 +1,120 @@
+package com.org.second.poc
+//We can extend several number of scala traits with a class or an abstract class that is known to be trait Mixins
+//It is worth knowing that only traits or blend of traits and class or blend of traits and abstract class can be extended by us.
+//Scala program of trait mixins
+//In another word In scala, trait mixins means you can extend any number of traits with a class or abstract class. You can extend only traits or combination of traits and class or traits and abstract class.
+//Trait Structure
+/*trait Display{
+  def Display()
+}
+//An abstract class structure
+abstract class Show
+{
+  def Show()
+}
+//Extending abstract class with trait
+class CS extends Show with Display{
+  //Defining abstract class method
+ def Display(){
+   println("Hello World")
+ }
+  //Defining trait method
+  def Show(){
+    println("How are you!!!")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Creating object of class CS
+    val x = new CS()
+    x.Display()
+    x.Show()
+  }
+}*/
+//Here, the correct order of Mixins is that, we need to extend any class or abstract class first and then extend any trait by using a keyword with
+//Another Example
+/*trait Text{
+  def txt()
+}
+//An abstract class structure
+abstract class LowerCase{
+  def lowerCase()
+}
+//Extending abstract class without trait
+class Myclass extends LowerCase{
+  //Defining abstract class method
+  def lowerCase(){
+    val y = "HELLO WORLD"
+    //Displays output
+    println(y.toLowerCase())
+  }
+  //Defining trait method
+  def txt(){
+    println("How are you!!!")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Creating object of Myclass
+    val x = new Myclass() with Text
+    //Calling abstract method
+    x.lowerCase()
+    //Calling trait method
+    x.txt()
+  }
+}*/
+//Again another example
+/*trait Print{
+  def print()
+}
+abstract class PrintA4{
+  def printA4()
+}
+class A6 extends Print with PrintA4{
+  //Trait print
+  def print(){
+    println("Print sheet")
+  }
+  //Abstract class printA4
+  def printA4(){
+    println("Print A4 Sheet")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a = new A6()
+    a.print()
+    a.printA4()
+  }
+}*/
+//The above program throws a compile time error, because we didn't maintain mixins order.
+//Scala Mixing Order
+//The right mixins order of trait is that any class or abstract class which you want to extend, first extend this. All the traits will be extended after this class or abstract class.
+//In other word we can say first we have to extends all the class then we use trait through with keyword.
+trait Print{
+  def print()
+}
+abstract class PrintA4{
+  def printA4()
+}
+class A6 extends PrintA4 with Print{
+  //Trait print
+  def print(){
+    println("Print sheet")
+  }
+  //Abstract class printA4
+  def printA4(){
+    println("Print A4 Sheet")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a = new A6()
+    a.print()
+    a.printA4()
+  }
+}
