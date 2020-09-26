@@ -1,0 +1,100 @@
+package com.org.second.poc
+//Access Modifiers in scala are used to define the access field of members of packages, classes or objects in scala.For using an access modifier, you must include its keyword in the definition of members of package, class or object.
+//1. Private: When a member is declared as private, we can only use it inside defining class or through one of its objects
+/*class abc{
+  private var a:Int = 123
+  def display(): Unit ={
+    a = 8
+    println(a)
+  }
+}
+object ScalaOOPS {
+  //class abc is accessible because this is in the same enclosing scope
+  def main(args: Array[String]): Unit = {
+    var e = new abc()
+    e.display()
+  }
+}*/
+//2. Protected: They can be only accessible from sub classes of the base class in which the member has been defined.
+/*class gfg{
+  //Declaration of protected member
+  protected var a:Int = 123
+  def display(): Unit ={
+    a = 8
+    println(a)
+  }
+}
+//class new1 extends by class gfg
+class new1 extends gfg{
+  def display1(): Unit ={
+    a = 9
+    println(a)
+  }
+}
+object ScalaOOPS extends App {
+  //class abc is accessible because this is the same enclosing scope
+  def main(args: Array[String]): Unit = {
+
+    var e = new gfg()
+    e.display()
+    var e1 = new new1()
+    e1.display1()
+  }
+}*/
+//3. Public: There is no public keyword in Scala. The default access level (when no modifier is specified) corresponds to Java’s public access level.We can access these anywhere.
+/*class sun{
+  var a:Int = 123
+}
+object ScalaOOPS extends App {
+  def main(args: Array[String]): Unit = {
+    var e = new sun()
+    e.a = 444
+    println(e.a)
+  }
+}*/
+//Another example of private access modifier
+/*class AcessExample{
+  private var a:Int = 10
+  def show(): Unit ={
+    println(a)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var p = new AcessExample()
+    p.a = 12
+    p.show()
+  }
+}*/
+//error: variable a in class AccessExample cannot be accessed in AccessExample
+//p.a = 12
+/*class AccessExample{
+  protected var a:Int = 10
+}
+class SubClass extends AccessExample{
+  def display(): Unit ={
+    println("a = "+a)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new SubClass()
+    s.display()
+  }
+}*/
+//Scala No-Access Modifier
+class AcessExample{
+  var a:Int = 10
+  def show(): Unit ={
+    println("a="+a)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a = new AcessExample()
+    a.show()
+  }
+}
