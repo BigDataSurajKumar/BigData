@@ -1,0 +1,108 @@
+package com.org.second.poc
+import Array._
+/*class ArrayExample{
+  //Creating Single Dimensional array
+  var arr = Array(1,2,3,4,5)
+  def show(): Unit ={
+    //Traversing array elements
+    for(a <- arr)
+      println(a)
+    //Accessing elements by using index
+    println("Third element = "+arr(2))
+  }
+}
+object ScalaOOPS{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var a = new ArrayExample()
+    a.show()
+  }
+}*/
+/*class ArrayExample{
+  //Creating single dimensional array
+  var arr = new Array[Int](5)
+  def show(): Unit ={
+    //Traversing array elements
+    for(a<-arr){
+      println(a)
+    }
+    println("Third Element before assignment=" +arr(2))
+    //Assigning new element at 2 in
+    arr(2)=10
+    println("Third Element after assignment= "+arr(2))
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a = new ArrayExample()
+    a.show()
+  }
+}*/
+//Multidimensional Array
+/*class ArrayExample{
+  //Creating multidimensional array
+  var arr = Array.ofDim[Int](2,2)
+  //Assigning value
+  arr(1)(0) = 15
+  def show(): Unit ={
+    for(i <- 0 to 1){
+      //Traversing elements by using loop
+      for(j <-0 to 1){
+        println(" "+arr(i)(j))
+      }
+      println()
+    }
+    println("Third Element = "+arr(1))
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a = new ArrayExample()
+    a.show()
+  }
+}*/
+/*class ArrayExample{
+  //Creating multidimensional array
+  var arr = Array(Array(1,2,3,4,5),Array(6,7,8,9,10))
+  def show(): Unit ={
+    for(i<- 0 to 1){
+      for(j <-0 to 4){
+        print(" "+arr(i)(j))
+      }
+      println()
+    }
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a = new ArrayExample()
+    a.show()
+  }
+}*/
+//Example:- Addition of Two Matrix
+class ArrayExample{
+  //Creating multidimensional array
+  var arr1 = Array(Array(1,2,3,4,5),Array(6,7,8,9,10))
+  var arr2 = Array(Array(1,2,3,4,5),Array(6,7,8,9,10))
+  var arr3 = Array.ofDim[Int](2,5)
+  def show(): Unit ={
+    //Traversing elements using loop
+    for(i<-0 to 1){
+      for(j<-0 to 4){
+        arr3(i)(j)= arr1(i)(j)+arr2(i)(j)
+        println(" "+arr3(i)(j))
+      }
+      println()
+    }
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a = new ArrayExample()
+    a.show()
+  }
+}
