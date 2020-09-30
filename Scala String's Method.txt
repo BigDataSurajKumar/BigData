@@ -1,0 +1,108 @@
+package com.org.second.poc
+//Scala Concatenation by using +(Plus) Operator
+//+(Plus) operator and concat() method
+//Both are use for add the data, + operator takes any type of argument and concat() method takes only one argument
+/*class StringExample{
+  var s1 = "This is "+"Scala string"
+  def show(): Unit ={
+    println(s1)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new StringExample()
+    s.show()
+  }
+}*/
+/*class StringEample{
+  var s1 = "This is"
+  var s2 = "Scala string example"
+  def show(): Unit ={
+    println(s1.concat(s2))
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new StringEample()
+    s.show()
+  }
+}*/
+//Scala substring
+/*class StringExample{
+  var s1 = "Scala string example"
+  def show(): Unit ={
+    println(s1.substring(0,7))
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new StringExample()
+    s.show()
+  }
+}*/
+//Scala String Interpolation
+//Starting in Scala 2.10.0, Scala offers a new mechanism to create strings from your data. It is called string interpolation. String interpolation allows users to embed variable references directly in processed string literals. Scala provides three string interpolation methods: s, f and raw
+/*class StringExample{
+  var pi = 3.14
+  def show(): Unit ={
+    println("Value of pi ="+pi)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new StringExample()
+    s.show()
+  }
+}*/
+//Scala String Interpolation example by using s Method
+//The s method of string interpolation allows us to pass variable in string object. You don't need to use + operator to format your output string.
+/*class StringExample{
+  var s1 = "Scala string example"
+  def show(): Unit ={
+    println(s"This is $s1")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new StringExample()
+    s.show()
+  }
+}*/
+//Scala String Interpolation Example By using f method
+//The f method is used to format your string output. It is like printf function of c language which is used to produce formatted output.
+/*class StringExample{
+  var s1 = "Scala String Example"
+  var version = 2.12
+  def show(): Unit ={
+    println(f"This is $s1%s, scala version is $version%2.2f")
+  }
+}
+object ScalaOOPS{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var s = new StringExample()
+    s.show()
+  }
+}*/
+//Scala String Interpolation example by using raw method
+//The raw method of string interpolation is used to produce raw string. It does not interpret special char present in the string.
+class StringExample{
+  var s1 = "Scala \tstring \nexample"
+  var s2 = raw"Scala \tstring \nexample"
+  def show(): Unit ={
+    println(s1)
+    println(s2)
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var s = new StringExample()
+    s.show()
+  }
+}
