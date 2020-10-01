@@ -1,0 +1,145 @@
+package com.org.second.poc
+import java.io.IOException
+//An exception is an unwanted or unexpected event, which occurs during the execution of a program i.e at run time.
+//These events change the flow control of the program in execution. These are situations that are not too dangerous and can be handled by the program.
+//Try/catch Construct
+/*object ExceptionHandle{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    try{
+      var N = 5/0
+    }
+    catch {
+      //Catch Block contain cases
+      case i: IOException =>
+        {
+          println("IOException occurred")
+        }
+      case a :ArithmeticException =>{
+        println("Arithmetic Exception coocurred")
+      }
+    }
+  }
+}*/
+//Scala program of finally exception
+/*object ExceptionExample{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    try{
+      var N =5/0
+    }
+    catch {
+      //Catch block contain case
+      case ex: ArithmeticException =>{
+        println("Arithmetic exception occurred.")
+      }
+    }
+    finally {
+      //Finally block will excute
+      println("This is final block")
+    }
+  }
+}*/
+/*class ExceptionExample{
+  def divide(a:Int,b:Int): Unit ={
+    try{
+      a/b
+    }
+    catch{
+      case e: ArithmeticException => println(e)
+    }
+    println("Rest of the code is executing")
+  }
+}
+object ScalaOOPS{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var e = new ExceptionExample()
+    e.divide(100,0)
+  }
+}*/
+/*class ExceptionExample{
+  def divide(a:Int,b:Int): Unit ={
+    try{
+      a/b
+      var arr = Array(1,2)
+      arr(10)
+    }
+    catch {
+      case e: ArithmeticException =>println(e)
+      case ex: Throwable => println("Found a unknown exception"+ex)
+    }
+    println("Rest of the code is executing")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var e = new ExceptionExample()
+    e.divide(100,10)
+  }
+}*/
+//Scala Throw Example
+//You can throw exception explicitly in you code. Scala provides throw keyword to throw exception. The throw keyword mainly used to throw custom exception.
+/*class ExceptionExample{
+  def validate(age:Int): Unit ={
+    if(age<18)
+      throw new ArithmeticException("You are not eligible")
+    else println("You are eligible")
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var e = new ExceptionExample()
+    e.validate(10)
+  }
+}*/
+//Scala Throws Keyword
+//Scala provides throws keyword to declare exception. You can declare exception with method definition. It provides information to the caller function that this method may throw this exception. It helps to caller function to handle and enclose that code in try-catch block to avoid abnormal termination of program.
+/*class ExceptionExample{
+  @throws(classOf[NumberFormatException])
+  def validate(): Unit ={
+    "abc".toInt
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var e = new ExceptionExample()
+    try{
+      e.validate()
+    }
+    catch {
+      case ex: NumberFormatException =>println("Exception handeled here")
+    }
+    println("Rest of the code executing")
+  }
+}*/
+//Scala Custom Exception
+//In scala, you can create your own exception. It is also known as custom exceptions. You must extend Exception class while declaring custom exception class.
+class InvalidAgeException(s:String)extends Exception(s){
+}
+class ExceptionExample{
+  @throws (classOf[InvalidAgeException])
+  def validate(age:Int): Unit ={
+    if(age<18){
+      throw new InvalidAgeException("Not eligible")
+    }
+    else{
+      println("You are eligible")
+    }
+  }
+}
+object ScalaOOPS{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var e = new ExceptionExample()
+    try{
+      e.validate(5)
+    }
+    catch {
+      case e : Exception => println("Exception occured:"+e)
+    }
+  }
+}
