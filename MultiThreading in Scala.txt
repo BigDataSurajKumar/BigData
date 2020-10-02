@@ -1,0 +1,113 @@
+package com.org.second.poc
+//Scala MultiThreading
+//A process in which multiple threads executing simultaneously that is called multithreading. It allows you to perform multiple tasks independently.
+//Threads are lightweight sub-processes which occupy less memory.
+/*Threads in Scala can be created by using two mechanisms :
+Extending the Thread class
+Extending the Runnable Interface*/
+//Scala thread creation by extending thread class
+/*class MyThread extends Thread{
+  override def run(): Unit ={
+    //Displaying the thread that is running
+    println("Thread"+Thread.currentThread().getName()+"is running")
+  }
+}
+object Multi{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    for(x <-1 to 5){
+      var th = new MyThread()
+      th.setName(x.toString())
+      th.start()
+    }
+  }
+}*/
+/*class MyThread extends Thread{
+  override def run(): Unit ={
+    println("Thread is running")
+  }
+}
+object Multi{
+    //Main Method
+    def main(args: Array[String]): Unit = {
+      var t = new MyThread()
+      t.start()
+    }
+}*/
+/*class MyThread extends Runnable{
+  override def run(): Unit ={
+    println("Thread is running")
+  }
+}
+object Multi{
+  //Main method
+  def main(args: Array[String]): Unit = {
+    var e = new MyThread()
+    var t = new Thread(e)
+    t.start()
+  }
+}*/
+//Thread sleep() method:-The sleep() method is used to sleep thread for the specified time. It takes time in milliseconds as an argument.
+/*class MyThread extends Thread{
+  override def run(): Unit ={
+    for (i<-0 to 5){
+      println(i)
+      Thread.sleep(500)
+    }
+  }
+}
+object Multi{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var t1 = new MyThread()
+    var t2 = new MyThread()
+    t1.start()
+    t2.start()
+  }
+}*/
+//Scala Thread Join Method
+//The join() method waits for a thread to die. In other words, The join() method is used to hold the execution of currently running thread until the specified thread finished it's execution
+/*class MyThread extends Thread{
+  override def run(): Unit ={
+    for(i<-0 to 5){
+      println(i)
+      Thread.sleep(500)
+    }
+  }
+}
+object Multi{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var t1 = new MyThread()
+    var t2 = new MyThread()
+    var t3 = new MyThread()
+    t1.start()
+    t1.join()
+    t2.start()
+    t3.start()
+
+  }
+}*/
+//Scala Thread Priority
+class MyThread extends Thread{
+  override def run: Unit ={
+    for(i<-0 to 5){
+      println(this.getName())
+      println(this.getPriority())
+      Thread.sleep(500)
+    }
+  }
+}
+object Multi{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var t1 = new MyThread()
+    var t2 = new MyThread()
+    t1.setName("First Thread")
+    t2.setName("Second Thread")
+    t1.setPriority(Thread.MAX_PRIORITY)
+    t1.setPriority(Thread.MAX_PRIORITY)
+    t1.start()
+    t2.start()
+  }
+}
