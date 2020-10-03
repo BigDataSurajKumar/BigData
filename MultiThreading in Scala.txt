@@ -111,3 +111,27 @@ object Multi{
     t2.start()
   }
 }
+package com.org.second.poc
+//Scala MultiThreading
+/*class ThreadExample() extends Thread{
+  override def run(): Unit ={
+    for(i <-0 to 5){
+      println(i)
+      Thread.sleep(500)
+    }
+  }
+  def task(): Unit ={
+    for(i<-0 to 5){
+      println(i)
+      Thread.sleep(200)
+    }
+  }
+}
+object Multi{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var t1 = new ThreadExample()
+    t1.start()
+    t1.task()
+  }
+}*/
