@@ -1,0 +1,42 @@
+package com.org.second.poc
+//Factorial no
+/*object Logical {
+  def factorial(n: Int): Int = {
+    var f = 1
+    for (i <- 1 to n) {
+      f = f * i
+    }
+    return f
+  }
+
+  //Main Method
+  def main(args: Array[String]): Unit = {
+println(factorial(5))
+  }
+}*/
+/*object Logical{
+  def factorial(n:Int):Int={
+    if(n==0)
+      return 1
+    else
+      return n*factorial(n-1)
+  }
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    println(factorial(5))
+  }
+}*/
+
+object prime{
+  def isPrime(i:Int):Boolean ={
+    if(i<=1)
+      false
+    else if(i==2)
+      true
+    else
+      !(2 to (i-1)).exists(x=> i% x==0)
+  }
+  def main(args: Array[String]): Unit = {
+    println(isPrime(7))
+  }
+}
