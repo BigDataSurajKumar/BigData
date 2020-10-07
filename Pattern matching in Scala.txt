@@ -1,0 +1,47 @@
+package com.org.second
+
+//Pattern matching is a way of checking the given sequence of tokens for the presence of the specific pattern.
+//It is the most widely used feature in Scala.
+//Here, “match” keyword is used instead of switch statement.
+
+/*object Pattern{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    var a =2
+    a match{
+      case 1 => println("One")
+      case 2 => println("Two")
+      case _ => println("No")
+    }
+  }
+}*/
+/*object Pattern{
+  def main(args: Array[String]): Unit = {
+    var result = search("Hello")
+    println(result)
+
+  }
+  def search(a:Any):Any = a match{
+    case 2 => println("One")
+    case "Two" => println("Two")
+   // case "Hello" => println("Hello")
+    case _ => println("No")
+  }
+}*/
+object Pattern{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+println(test("G2"))
+  }
+  //Method containing match keyword
+  def test(x:String):String = x match{
+    //If value of x is "G1", this case will be excuted
+    case "G1" => "Hello"
+
+      //if value of x is "G2", this case will be executed
+    case "G2" => "Scala Tutorials"
+
+      //If x doesnot match any sequence, then this case will be excuted
+    case _ => "Default case Executed"
+  }
+}
