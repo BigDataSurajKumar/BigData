@@ -1,0 +1,68 @@
+package com.org.second
+
+//import scala.xml.dtd.Scanner
+import java.util.Scanner
+
+
+//User gives inputs in the pattern of string from the keyboard
+/*object User{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    //Applying loop
+   // while (true){
+      //Reads the line from the console
+      val result = scala.io.StdIn.readLine()
+      //Displays the string that is given by the user
+      println("Enter the String: "+result)
+      val a = scala.io.StdIn.readInt()
+      println("Enter age:"+a)
+      println()
+
+  }
+}*/
+/*object Hello{
+  def main(args: Array[String]): Unit = {
+    val scanner = new Scanner(System.in)
+    println("Enter your name")
+    val a = scanner.nextLine()
+    println("My name is : "+a)
+    println("Enter your age")
+    val b = scanner.nextInt()
+    println("My age is :"+b)
+  }
+}*/
+//Sum of two number given by user
+/*object sum{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    val scanner = new Scanner(System.in)
+    println("Enter two number")
+    val a = scanner.nextInt()
+    println("First Number: "+a)
+    val b = scanner.nextInt()
+    println("Second number:"+b)
+    val sum = a+b
+    println("Sum of two number is "+sum)
+
+  }
+}*/
+object Number{
+  //Main Method
+  def main(args: Array[String]): Unit = {
+    val scanner = new Scanner(System.in)
+    println("Enter two number:")
+    val a = scanner.nextInt()
+    print("First number is :"+a)
+    val b = scanner.nextInt()
+    println("Second number is:"+b)
+    println("*****************Math Operations*******************")
+    val sum = a+b
+    println("Sum of Two number is:" +sum)
+    val sub = a-b
+    println("Substract of two number is: "+sub)
+    val multi = a*b
+    println("Multiply of two number is:" +multi)
+    val div = a/b
+    println("Divide of two number is:" +div)
+    println("***************Thank You*************************")
+  }
